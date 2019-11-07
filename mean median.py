@@ -13,11 +13,7 @@ def median(n):
     return n[mid-1]
 
 def mean(x, n):
-    if len(n) % 2 == 0:
-        mean = x // len(n)
-    else:
-        mean = x // len(n)+1
-
+    mean = x // len(n)
     return mean
 
 
