@@ -1,6 +1,8 @@
 """Welcome to the decimal to binary converter"""
 
-bits = []
+import math
+
+
 running = True
 
 def decimal_binary(n, b):
@@ -28,27 +30,25 @@ def decimal_binary(n, b):
 
 
 while running:
+    bits = []
 
-    bit = input("Enter the number of bits: ")
-
-    if bit == "q":
-        running = False
-        quit()
+   
         
     num = input("Enter the number: ")
 
     if num == "q":
         running = False
         quit()
-
-    
-
-    bit = int(bit)
     num = int(num)
+    if num <= 0:
+        print("Must be bigger than 0")
+    else:
+        bit = int((math.log(num)/math.log(2))+1)
+        
 
-    for i in range(bit):
-        bits.append("0")
+        for i in range(bit):
+            bits.append("0")
 
 
 
-    print(decimal_binary(num, bits))
+        print(decimal_binary(num, bits))
