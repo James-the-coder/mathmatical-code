@@ -9,7 +9,7 @@ def decimal_binary(n, b):
     counter = 0
     z = len(b)
     while n > 0:
-        """binary uses powers of 2 so i have taken the length of the list - 1 to
+        """binary uses powers of 2 so i have taken the length of the list minus 1 to
            the power of two and minussed it from the number inputed"""
         if n >= 2**(z-1):
             n -= 2**(z-1)
@@ -40,8 +40,11 @@ while running:
         running = False
         quit()
     num = int(num)
-    if num <= 0:
-        print("Must be bigger than 0")
+    if num < 0:
+        print("Must be positive integer")
+        
+    if num == 0:
+        print("0")
     else:
         bit = int((math.log(num)/math.log(2))+1)
         
