@@ -1,6 +1,6 @@
 import math
 
-# ax2 + bx + c = 0
+# ax^2 + bx + c = 0
 
 a = float(input("Input what A is: "))
 
